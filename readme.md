@@ -3,8 +3,8 @@
 This is a simple CRUD test with mongodb and nodejs with REST app, to run this application you must have MongoDb installed on your pc or change the url param from **_"config/database.config.js"_** to your connection string.
 ### Basics
 
-* [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework
+* [node.js](https://nodejs.org/en/) - evented I/O for the backend
+* [Express](http://expressjs.com/) - fast node.js network app framework
 * [MongoDB](https://www.mongodb.com/) - NoSQL database used to store stuff
 
 
