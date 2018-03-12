@@ -4,7 +4,6 @@
 const express = require('express');
 const faker = require('faker');
 const bodyParser = require('body-parser');
-const expressLayouts = require('express-ejs-layouts');
 const dbConfig = require('./config/database.config');
 const mongoose = require('mongoose');
 var app = express();
@@ -14,8 +13,6 @@ var app = express();
 ============================================================================= */
 
 const port = 3000;
-app.set('view engine', 'ejs') // Setting ejs as the engine
-app.use(expressLayouts)       // Setting express-ejs-layouts to pass data into ejs
 app.use(bodyParser.urlencoded({ extended: true })) // With this we can get a clear body response from requests
 app.use(bodyParser.json())
 
