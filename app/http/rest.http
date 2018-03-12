@@ -4,7 +4,7 @@ GET http://localhost:3000/notes HTTP/1.1
 content-type: application/json
 
 ### Get one note by id
-GET http://localhost:3000/notes/[id] HTTP/1.1
+GET http://localhost:3000/notes/5aa5ccbbe38c7421283baaf0 HTTP/1.1
 content-type: application/json
 
 ### Create a note
@@ -13,10 +13,10 @@ content-type: application/json
 
 {
   "title": "Goku here",
-  "content": "Becaming a super saiyan"
+  "content": "Transforming into a super saiyan"
 }
 ### Update a note by id
-PUT http://localhost:3000/notes/[id] HTTP/1.1
+PUT http://localhost:3000/notes/5aa5ccbbe38c7421283baaf0 HTTP/1.1
 content-type: application/json
 
 {
@@ -24,5 +24,5 @@ content-type: application/json
   "content": "KA-MEEEE-HAAAAA-MEEEEEEEE..... HAAAAAA!!!!!!!"
 }
 ### Delete a note by id
-DELETE url HTTP/1.1 http://localhost:3000/notes/[id] HTTP/1.1
+DELETE http://localhost:3000/notes/5aa5ccbbe38c7421283baaf0 HTTP/1.1
 content-type: application/json
