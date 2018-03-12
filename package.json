@@ -1,0 +1,22 @@
+{
+  "name": "node-easy-notes-app",
+  "version": "1.0.0",
+  "description": "Better take a note!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "RestAPI",
+    "Mongoose",
+    "Notes"
+  ],
+  "author": "pablodias",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9"
+  }
+}
