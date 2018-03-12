@@ -1,4 +1,4 @@
-# node-mongo-ejs Hero Quotes!
+# Hero Quotes!
 
 This is a simple CRUD app that stores heroes and theirs messages (also some villains), to run this application you must have MongoDb installed on your pc or change the url param from **_"config/database.config.js"_** to your connection string.
 ### Basics
