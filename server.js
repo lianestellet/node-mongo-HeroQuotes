@@ -21,7 +21,21 @@ app.use(bodyParser.urlencoded({ extended: true })) // With this we can get a cle
 //app.use(bodyParser.json())
 
 /*===========================================================================
-	MONGODB CONNECTION
+	ROUTES FOR OUR APPLICATION
+============================================================================= */
+
+app.get('/', function(req, res){
+  res.send({"message": "Welcome stranger"})
+});
+
+// Require API routes
+require('./app/routes/api.routes.js')(app);
+
+// Common Routes for web application
+require('./app/routes/home.routes')(app);
+
+/*===========================================================================
+	MONGODB CONNECTION WITH SERVER START
 ============================================================================= */
 
 mongoose.Promise = global.Promise;
@@ -37,16 +51,3 @@ db.once('open', () => {  console.log('MongoDB connected on '+ dbConfig.url);
   });
 });
 
-/*===========================================================================
-	ROUTES FOR OUR APPLICATION
-============================================================================= */
-
-app.get('/', function(req, res){
-  res.send({"message": "Welcome stranger"})
-});
-
-// Require API routes
-require('./app/routes/api.routes.js')(app);
-
-// Common Routes for web application
-require('./app/routes/home.routes')(app);

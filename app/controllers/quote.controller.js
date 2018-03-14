@@ -23,7 +23,7 @@ exports.findAll = function(req, res) {
   Quote.find(function(err, quotes){
       if(err) {
           console.log(err);
-          res.status(500).send({message: "Some error occurred while retrieving quotes."});
+          res.status(500).send({message: "Some error occurred while retrieving quotes: " + err});
       } else {
           res.send(quotes);
       }

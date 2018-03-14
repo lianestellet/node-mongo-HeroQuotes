@@ -1,8 +1,24 @@
 module.exports = function(app) {
     const faker = require('faker')
+    const quotes = require('../controllers/quote.controller');
+    const axios = require('axios');
 
-    app.get('/home', function(req, res){        
-        res.render('pages/home')
+    app.get('/home', (req, resz) => {
+
+        var x;
+        axios.get('http://localhost:3000/api/quotes')
+            .then(function(res){
+                x = res.data;
+                console.log(x[0].hero)
+                resz.render('pages/home', {
+                    result:  x
+                })
+            })
+            .catch(function (error){
+                console.log(error)
+            });
+            
+
     });
 
     app.get('/about', (req, res) => {
