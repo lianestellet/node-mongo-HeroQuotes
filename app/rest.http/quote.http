@@ -3,10 +3,6 @@
 GET http://localhost:3000/api/quotes HTTP/1.1
 content-type: application/json
 
-### Get one quote by id
-GET http://localhost:3000/api/quotes/5aa6cb59cf3612432401a138 HTTP/1.1
-content-type: application/json
-
 ### Create a quote
 POST http://localhost:3000/api/quotes HTTP/1.1
 content-type: application/json
@@ -16,8 +12,13 @@ content-type: application/json
   "message": "Transforming into a super saiyan"  
 }
 
+### Get one quote by id
+GET http://localhost:3000/api/quotes/5b381d8ac66fb8027cddaa0d HTTP/1.1
+content-type: application/json
+
+
 ### Update a quote by id
-PUT http://localhost:3000/api/quotes/5aa6cb59cf3612432401a138 HTTP/1.1
+PUT http://localhost:3000/api/quotes/5b381d8ac66fb8027cddaa0d HTTP/1.1
 content-type: application/json
 
 {

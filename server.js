@@ -18,7 +18,7 @@ app.set('views', __dirname + '/app/views')
 app.set('view engine', 'ejs') // Setting ejs as the engine
 app.use(expressLayouts)       // Setting express-ejs-layouts to pass data into ejs
 app.use(bodyParser.urlencoded({ extended: true })) // With this we can get a clear body response from requests
-//app.use(bodyParser.json())
+app.use(bodyParser.json())
 
 /*===========================================================================
 	ROUTES FOR OUR APPLICATION
